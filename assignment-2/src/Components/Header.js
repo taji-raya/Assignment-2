@@ -1,5 +1,6 @@
 import React from 'react'
 import Search from './Search'
+import searchCSS from './searchBarStyle.module.css'
 
 function Header() {
   return (
@@ -11,12 +12,14 @@ function Header() {
          <p className='sentence'>Millions of movies, TV shows and people to discover. Explore now.</p>
       </div>
       <div>
-      <Search/>
+      <Search isNavbar={false}/>
+      <input type='submit' value='Search' className='submitBtn'/>
       </div>
-      
+  
       </div>
       
     </div>
+
     </>
   )
 }

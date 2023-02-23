@@ -26,21 +26,19 @@
   align-items: center;
   margin-left: 70%;
 }
-ul{
-  background-color: red;
-}
-li{
-  background-color: green;
+
+.en {
+border: 2px white;
 }
 .searchBtn{
   border: none;
   outline: none;
   background-color: transparent;
 }
-.en{
-  border: 2px solid white;
-}
 
+.submitBtn{
+  display: flex;
+}
 /* Header Component Styling */
 .headerContainer{
   margin:0% 4% 4% 4%;
@@ -62,32 +60,37 @@ li{
   font-size: 35px;
   text-align: left;
 }
+.navbarSearchStyle{
+  background-color: red;
+}
 
-
-/*Movies Component Styling*/
+/*Popular movies Component Styling*/
 .popularMovies{
   text-align: left;
   margin-left: 8%;
 }
 .moviesContainer{
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
   margin: 0 auto;
-  background-color: aqua;
 }
 
 .box{
   width: 10%;
+  background-color: aqua;
+  flex-wrap: nowrap;
 }
 .content{
-  padding: 10px;
+  padding: 10%;
   margin: 10px;
+  width: 100%;
+  background-color: green;
   
 }
 .contentImage{
-  height: 40px;
-  width: 40px;
+  height: 100%;
+  width: 100%;
+
 }
 
 /* Single Movie Component Styling*/
