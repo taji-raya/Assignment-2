@@ -1,6 +1,4 @@
 import React from 'react'
-import Search from './Search'
-import searchCSS from './searchBarStyle.module.css'
 const Navbar = () => {
 
   return (

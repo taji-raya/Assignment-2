@@ -1,17 +1,20 @@
 import React from 'react'
 import { useState } from 'react'
-import searchCSS from './searchBarStyle.module.css'
+import SubmitButton from './SubmitButton'
 
 function Search({isNavbar}) {
     const [query,setQuery] = useState("")
+    console.log(query);
     return (
-    <div>
+    <div className='searchAndSubmit'>
         <input
-        className={isNavbar ? searchCSS.navbarSearchBarStyle : searchCSS.headerSearchBarStyle}
+        className= 'headerSearchBarStyle'
          type='textarea' 
          placeholder='Search'
          onChange={(e)=> setQuery(e.target.value)}
          />
+        
+         <SubmitButton/>
          
       </div>
   )
