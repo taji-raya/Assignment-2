@@ -27,7 +27,7 @@ function Header() {
       <Search data={movie}/>
       
       </div>
-  
+    <p>Test</p>
       </div>
       
     </div>
