@@ -2,10 +2,11 @@
   text-align: center;
   width: 100%;
 }
+
 /* NavBar Component Styling */
 .navbarContainer{
   background-color: rgb(2,37,64);
-  padding: 6px;
+  padding: 2px;
   
 }
 .navbarContent{
@@ -15,7 +16,6 @@
 .logo{
   width: 100px;
   height: 100px;
-  padding-left: 10%;
 }
 
 .listStyle{
@@ -23,12 +23,25 @@
   list-style: none;
   align-items: center;
   display: flex;
-  align-items: center;
-  margin-left: 70%;
+  margin-left: 80%;
+}
+
+.listStyle ul{
+  display: flex;
 }
 
 .en {
-border: 2px white;
+border: 2px solid white;
+}
+.navBarSearchContainer{
+
+
+}
+.navBarSearch{
+padding:15px;
+outline: none;
+border: none;
+background: url('https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-28-search-blue-177462d06db81ff2a02aa022c1c0be5ba4200d7bd3f51091ed9298980e3a26a1.svg') no-repeat;
 }
 
 
@@ -108,7 +121,7 @@ border: 2px white;
 }
 
 .menuBtn:hover{
-  background-color: rgb(72, 72, 222);
+  background-color: rgb(1,180,228);
   color: black;
 }
 
@@ -135,6 +148,13 @@ border: 2px white;
   font-size: 1em;
   font-weight: bold;
   cursor: pointer;
+ 
+}
+a{
+  text-decoration: none;
+}
+.item h6:hover{
+  color:rgb(1,180,228);
 }
 
 .item img{

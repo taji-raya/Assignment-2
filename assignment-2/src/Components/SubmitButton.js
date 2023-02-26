@@ -1,9 +1,11 @@
 import React from 'react'
-
-function SubmitButton() {
+const searchFunction = () =>{
+  alert('Hi')
+}
+function SubmitButton({onPress}) {
   return (
     <div>
-      <input type='submit' value='Search' className='submitBtn'/>
+      <input type='submit' value='Search' className='submitBtn' onClick={onPress}/>
     </div>
   )
 }

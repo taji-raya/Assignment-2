@@ -1,10 +1,17 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import SubmitButton from './SubmitButton'
+import { Link } from 'react-router-dom'
 
-function Search({isNavbar}) {
-    const [query,setQuery] = useState("")
-    console.log(query);
+function Search() {
+    const [query,setQuery] = useState(false);
+
+
+    const searchFunction = () =>{
+      console.log(query)
+    
+    }
+   
     return (
     <div className='searchAndSubmit'>
         <input
@@ -14,7 +21,7 @@ function Search({isNavbar}) {
          onChange={(e)=> setQuery(e.target.value)}
          />
         
-         <SubmitButton/>
+         <SubmitButton onPress = {searchFunction}/>
          
       </div>
   )

@@ -4,6 +4,7 @@ import Cards from './Cards';
 
 //https://api.themoviedb.org/3/movie/popular/550?api_key=8b8f208cf321ce6c5f01d462798b3b33
 //.filter((movieList) => movieList.title.toLowerCase().includes(query))
+
 function PopularMovies() {
   const [movie, setMovie] = useState([]);
   useState(() => {
