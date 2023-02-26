@@ -1,8 +1,10 @@
 import React from 'react'
 import NavSearch from './NavSearch';
+import NavigationSearch from './NavigationSearch'
 import { Link } from 'react-router-dom';
+import {useState} from 'react'
 const Navbar = () => {
-
+  
   return (
     <>
       <div className='navbarContainer'>
@@ -12,7 +14,8 @@ const Navbar = () => {
           </Link>
             <ul className='listStyle'>
               <li className='eng'>EN </li>
-              <li><NavSearch/></li>
+              <NavSearch/>
+             
             </ul>
         </div>
       </div>

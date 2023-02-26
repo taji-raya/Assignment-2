@@ -23,7 +23,7 @@
   list-style: none;
   align-items: center;
   display: flex;
-  margin-left: 80%;
+ 
 }
 
 .listStyle ul{
@@ -33,10 +33,7 @@
 .en {
 border: 2px solid white;
 }
-.navBarSearchContainer{
 
-
-}
 .navBarSearch{
 padding:15px;
 outline: none;
@@ -167,6 +164,24 @@ a{
 }
 
 /* Single Movie Component Styling*/
+.dataItem{
+
+display: flex;
+align-items: center;
+
+}
+.dataResult{
+  width: 300px;
+ 
+height: 100px;
+  overflow: hidden;
+  background-color: white;
+  overflow-y: auto;
+  margin-top: 10px;
+}
+.dataResult::-webkit-scrollbar{
+  display: none;
+}
 
 
 /*Footer Component Styling*/

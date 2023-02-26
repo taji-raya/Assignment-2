@@ -15,7 +15,6 @@ function Cards(props) {
                 />
             </Link>
             <Link to={`/Movie/${props.title}`}><h6>{props.title}</h6></Link>
-            <p>{props.overview}</p>
         </motion.div>
 
     )
