@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import NavigationSearch from './NavigationSearch'
 
 
-function NavSearch() {
+function NavigationSearchButton() {
   const [active, setActive]=useState("Clicked");
   const [movie, setMovie] = useState([]);
   useState(() => {
@@ -28,4 +28,4 @@ function NavSearch() {
   )
 
 }
-export default NavSearch
+export default NavigationSearchButton

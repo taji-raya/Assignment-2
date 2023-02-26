@@ -6,7 +6,7 @@ import Error from './Components/Error';
 import Movie from './Components/Movie';
 import SearchResult from './Components/SearchResult';
 import Search from './Components/Search';
-import NavSearch from './Components/NavSearch';
+import NavigationSearchButton from './Components/NavigationSearchButton';
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
       <Route index element={<Home/>}/>
       <Route path="/Movie/:movieID" element={<Movie/>}/>
       <Route path = "/Search" element = {<Search/>}/>
-      <Route path ="/NavSearch" element={<NavSearch/>}/>
+      <Route path ="/NavSearch" element={<NavigationSearchButton/>}/>
       <Route path = "/SearchResult/:movieName" element = {<SearchResult/>}/>
       <Route path = '*' element = {<Error/>}/>
         </Route>
