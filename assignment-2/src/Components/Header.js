@@ -17,20 +17,20 @@ function Header() {
     [])
   return (
     <>
-    <div className='headerContainer'>
-      <div className='backgroundImage'> 
-      <div>
-         <h1 className='heading'>Welcome!</h1>
-         <p className='sentence'>Millions of movies, TV shows and people to discover. Explore now.</p>
+      <div className='headerContainer'>
+        <div className='backgroundImage'>
+          <div>
+            <h1 className='heading'>Welcome!</h1>
+            <p className='sentence'>Millions of movies, TV shows and people to discover. Explore now.</p>
+          </div>
+          <div>
+            <Search data={movie} />
+
+          </div>
+          <p>Test</p>
+        </div>
+
       </div>
-      <div>
-      <Search data={movie}/>
-      
-      </div>
-    <p>Test</p>
-      </div>
-      
-    </div>
 
     </>
   )

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import Cards from './Cards';
 
@@ -6,14 +6,15 @@ import Cards from './Cards';
 //.filter((movieList) => movieList.title.toLowerCase().includes(query))
 
 function PopularMovies() {
+
   const [movie, setMovie] = useState([]);
-  useState(() => {
-    const movieDB = async () => {
+  useEffect(() => {
+    const movieDB = () => {
       fetch('https://api.themoviedb.org/3/movie/popular?api_key=8b8f208cf321ce6c5f01d462798b3b33')
         .then((res) => res.json())
         .then((data) => {
           setMovie(data.results)
-        });
+        },);
     }
     movieDB();
   },
@@ -23,20 +24,20 @@ function PopularMovies() {
       <div className='popularMovies'>
         <h4>New Movies</h4>
       </div>
-      <motion.div className='carousel'>
-        <motion.div drag = 'x' className='innerCarousel'>
+      <div className='carousel'>
+        <div className='innerCarousel'>
           {movie.map((movieList) => (
-            <motion.div key={movieList.id} className='item'>
+            <div key={movieList.id} className='item'>
               <Cards
                 id={movieList.id}
                 title={movieList.title}
                 img={movieList.poster_path}
               />
-            </motion.div>
+            </div>
           ))}
 
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
     </>
   )
 }

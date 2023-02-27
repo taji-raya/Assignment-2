@@ -1,9 +1,10 @@
-import React, {useState} from 'react'
-import NavigationSearch from './NavigationSearch'
+import React, { useState } from 'react'
+import NavigationSearchBar from './NavigationSearchBar'
 
 
 function NavigationSearchButton() {
-  const [active, setActive]=useState("Clicked");
+  const [open, setOpen] = useState(false);
+
   const [movie, setMovie] = useState([]);
   useState(() => {
     const movieDB = () => {
@@ -16,14 +17,16 @@ function NavigationSearchButton() {
     movieDB();
   },
     [])
-  
+
   return (
     <>
-    <div className='navBarSearchContainer'/> 
-    <button className='navBarSearch' onClick={()=> setActive("")}></button>
-    {
-      active === "Clicked" && <NavigationSearch data={movie}/>
-    }
+      <div className='navBarSearchContainer' />
+      <button className='navBarSearch' onClick={() => setOpen(!open)}></button>
+      {open && (
+        <NavigationSearchBar data={movie} onClick={() => setOpen(false)} />
+      )
+
+      }
     </>
   )
 

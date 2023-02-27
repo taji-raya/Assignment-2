@@ -8,6 +8,7 @@ function Cards(props) {
         <motion.div key={props.id}>
             <MenuButton />
             <Link to={`/Movie/${props.title}`}>
+
                 <img
                     className='contentImage'
                     src={`https://image.tmdb.org/t/p/w500/${props.img}`}
