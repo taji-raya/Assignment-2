@@ -25,9 +25,7 @@ function Header() {
           </div>
           <div>
             <Search data={movie} />
-
           </div>
-          <p>Test</p>
         </div>
 
       </div>

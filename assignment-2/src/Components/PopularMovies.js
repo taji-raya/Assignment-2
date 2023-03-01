@@ -1,9 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
-import { motion } from 'framer-motion'
 import Cards from './Cards';
-
+import Switch from './Switch';
 //https://api.themoviedb.org/3/movie/popular/550?api_key=8b8f208cf321ce6c5f01d462798b3b33
-//.filter((movieList) => movieList.title.toLowerCase().includes(query))
 
 function PopularMovies() {
 
@@ -22,7 +20,13 @@ function PopularMovies() {
   return (
     <>
       <div className='popularMovies'>
-        <h4>New Movies</h4>
+        <div className='switchContainer'>
+          <h4>Trending</h4>
+          <div className='switchContent'>
+            <Switch />
+          </div>
+
+        </div>
       </div>
       <div className='carousel'>
         <div className='innerCarousel'>
@@ -32,6 +36,8 @@ function PopularMovies() {
                 id={movieList.id}
                 title={movieList.title}
                 img={movieList.poster_path}
+                release_date={movieList.release_date}
+                vote_average={movieList.vote_average}
               />
             </div>
           ))}

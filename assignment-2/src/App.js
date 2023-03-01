@@ -1,5 +1,5 @@
 import './App.css';
-import {  Routes, Route  } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from './Components/Home';
 import SharedLayouts from './Components/SharedLayouts'
 import Error from './Components/Error';
@@ -12,13 +12,13 @@ function App() {
   return (
     <div className="App">
       <Routes>
-      <Route path="/" element={<SharedLayouts/>}>
-      <Route index element={<Home/>}/>
-      <Route path="/Movie/:movieID" element={<Movie/>}/>
-      <Route path = "/Search" element = {<Search/>}/>
-      <Route path ="/NavSearch" element={<NavigationSearchButton/>}/>
-      <Route path = "/SearchResult/:movieName" element = {<SearchResult/>}/>
-      <Route path = '*' element = {<Error/>}/>
+        <Route path="/" element={<SharedLayouts />}>
+          <Route index element={<Home />} />
+          <Route path="/Movie/:movieID" element={<Movie />} />
+          <Route path="/Search" element={<Search />} />
+          <Route path="/NavSearch" element={<NavigationSearchButton />} />
+          <Route path="/SearchResult/" element={<SearchResult />} />
+          <Route path='*' element={<Error />} />
         </Route>
       </Routes>
     </div>
