@@ -1,12 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
-import { FaHeart, FaList } from 'react-icons/fa';
 const MenuButton = () => {
   const Menus = ['Favorite', 'Watchlist']
-  const Icons = [
-    <FaHeart />,
-    <FaList />
-  ]
+
   const [open, setOpen] = useState(false);
   return (
     <>
@@ -18,7 +14,7 @@ const MenuButton = () => {
           <div className='dropdownMenu'>
             <ul>
               {Menus.map((menu, icon) => (
-                <div>
+                <div key={menu}>
                   <li key={menu} className='listItem'
                     onClick={() => setOpen(false)}> {menu} </li>
                   <br />

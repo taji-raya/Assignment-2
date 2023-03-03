@@ -21,7 +21,8 @@ function NavigationSearchButton() {
   return (
     <>
       <div className='navBarSearchContainer' />
-      <button className='navBarSearch' onClick={() => setOpen(!open)}></button>
+      {/* change to not open to open the dropdown */}
+      <button className='navBarSearch' onClick={() => setOpen(open)}></button>
       {open && (
         <NavigationSearchBar data={movie} onClick={() => setOpen(false)} />
       )

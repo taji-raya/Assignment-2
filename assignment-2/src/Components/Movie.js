@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import Footer from './Footer'
 import { FaHeart, FaList } from 'react-icons/fa';
-
+//https://api.themoviedb.org/3/search/movie?api_key=8b8f208cf321ce6c5f01d462798b3b33
+//https://api.themoviedb.org/3/movie/popular?api_key=8b8f208cf321ce6c5f01d462798b3b33
 function Movie() {
     const [movie, setMovie] = useState({});
     const { movieID } = useParams();
@@ -10,7 +11,7 @@ function Movie() {
         getMovie();
     })
     const getMovie = () => {
-        fetch('https://api.themoviedb.org/3/movie/popular?api_key=8b8f208cf321ce6c5f01d462798b3b33')
+        fetch('https://api.themoviedb.org/3/search/movie?api_key=8b8f208cf321ce6c5f01d462798b3b33')
             .then((res) => res.json())
             .then((data) => {
                 const newMovie = data.results.find((movie) => movie.id === parseInt(movieID));
@@ -19,6 +20,7 @@ function Movie() {
     }
     return (
         <>
+            <div className='divider'></div>
             <div className='infoContainer'>
                 <div className='imageContainer'>
                     <img
@@ -29,9 +31,8 @@ function Movie() {
                 </div>
                 <div className='infoInnerContainer'>
                     <h1>{movie.title}</h1>
-                    <h4>Genre</h4>
                     <div className='btnContainer'>
-                        <button id='img1'>Rating</button>
+                        <button id='img1'>{movie.vote_average}</button>
                         <button id='img2'><FaHeart /> </button>
                         <button id='img3'><FaList /></button>
                     </div>
