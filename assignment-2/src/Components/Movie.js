@@ -11,7 +11,7 @@ function Movie() {
         getMovie();
     })
     const getMovie = () => {
-        fetch('https://api.themoviedb.org/3/search/movie?api_key=8b8f208cf321ce6c5f01d462798b3b33')
+        fetch('//https://api.themoviedb.org/3/movie/popular?api_key=8b8f208cf321ce6c5f01d462798b3b33')
             .then((res) => res.json())
             .then((data) => {
                 const newMovie = data.results.find((movie) => movie.id === parseInt(movieID));
