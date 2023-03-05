@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import MenuButton from './MenuButton'
 import { Chart as Chartjs, ArcElement, Tooltip, Legend } from 'chart.js'
-import { Doughnut } from 'react-chartjs-2';
 
 Chartjs.register(
     ArcElement,
@@ -25,7 +24,12 @@ function Cards(props) {
             </Link>
             <div>
             </div>
-            <div className='voteAverage'><h4>{props.vote_average}</h4></div>
+            <div className='voteAverage'>
+                <h4>{props.vote_average}</h4>
+
+
+
+            </div>
             <Link to={`/Movie/${props.id}`}><h6>{props.title}</h6></Link>
         </div>
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 function SearchCards(props) {
     return (
         <>
@@ -17,11 +17,7 @@ function SearchCards(props) {
                     </div>
                 </div>
             </div>
-        </>
-    )
-}
-
-{/* <div key={props.id} className='searchContainer'>
+            {/* <div key={props.id} className='searchContainer'>
     <div key={props.id} className='innerSearchContainer'>
         <div key={props.id} className='searchResultCards'>
 
@@ -42,5 +38,9 @@ function SearchCards(props) {
         </div>
     </div>
 </div> */}
+
+        </>
+    )
+}
 
 export default SearchCards

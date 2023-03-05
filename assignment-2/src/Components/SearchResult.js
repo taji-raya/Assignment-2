@@ -1,5 +1,5 @@
 import React from 'react'
-import { useParams, Link } from 'react-router-dom';
+// import { useParams, Link } from 'react-router-dom';
 import SearchCards from './SearchCards';
 
 function SearchResult({ movie }) {

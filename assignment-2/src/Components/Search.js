@@ -21,8 +21,7 @@ function Search(setMovie) {
             .then((result) => result.json())
             .then((data) => {
                 { setMovie(data.results) }
-            }
-                ,);
+            },);
         if (!query) { alert('Please enter a movie name'); }
         else {
             navigate('/SearchResult');
