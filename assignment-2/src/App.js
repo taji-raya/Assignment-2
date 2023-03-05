@@ -10,15 +10,15 @@ import Search from './Components/Search';
 import NavigationSearchButton from './Components/NavigationSearchButton';
 
 function App() {
-  const [movie, setMovie] = useState({});
+  const [query, setQuery] = useState();
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<SharedLayouts />}>
-          <Route index element={<Home />} />
+          <Route index element={<Home setQuery={setQuery} />} />
           <Route path="/Movie/:movieID" element={<Movie />} />
-          <Route path="/Search" element={<Search setMovie={setMovie} />} />
-          <Route path="/SearchResult" element={<SearchResult movie={movie} />} />
+          <Route path="/Search" element={<Search />} />
+          <Route path="/SearchResult" element={<SearchResult query={query} />} />
           <Route path="/NavSearch" element={<NavigationSearchButton />} />
           <Route path='*' element={<Error />} />
         </Route>

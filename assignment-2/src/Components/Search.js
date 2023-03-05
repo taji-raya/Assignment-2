@@ -2,33 +2,29 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 //https://api.themoviedb.org/3/search/movie?api_key=8b8f208cf321ce6c5f01d462798b3b33
 
-function Search(setMovie) {
-
-    const [query, setQuery] = useState('');
+function Search({ setQuery }) {
     const navigate = useNavigate();
+    // async function search(e) {
+    //     e.preventDefault();
+    //     var requestOptions = {
+    //         method: "GET",
+    //         redirect: "follow",
+    //     }
 
-    async function search(e) {
-        e.preventDefault();
-        var requestOptions = {
-            method: "GET",
-            redirect: "follow",
-        }
+    //     fetch(
+    //         `https://api.themoviedb.org/3/search/movie?query=${query}&api_key=8b8f208cf321ce6c5f01d462798b3b33`,
+    //         requestOptions
+    //     )
+    //         .then((result) => result.json())
+    //         .then((data) => {
+    //             { setMovie(data.results) }
+    //         },);
+    //     if (!query) { alert('Please enter a movie name'); }
+    //     else {
+    //         navigate('/SearchResult');
+    //     }
 
-        fetch(
-            `https://api.themoviedb.org/3/search/movie?query=${query}&api_key=8b8f208cf321ce6c5f01d462798b3b33`,
-            requestOptions
-        )
-            .then((result) => result.json())
-            .then((data) => {
-                { setMovie(data.results) }
-            },);
-        if (!query) { alert('Please enter a movie name'); }
-        else {
-            navigate('/SearchResult');
-        }
-        console.log(query);
-
-    };
+    // };
 
     return (
 
@@ -36,7 +32,6 @@ function Search(setMovie) {
             <div className='searchAndSubmit'>
                 <input
                     onChange={(event) => {
-                        event.preventDefault();
                         setQuery(event.target.value)
                     }
                     }
@@ -45,7 +40,9 @@ function Search(setMovie) {
                     placeholder='Search'
                 />
                 <div>
-                    <input type='submit' value='Search' className='submitBtn' onClick={search} />
+                    <input type='submit' value='Search' className='submitBtn' onClick={() => {
+                        navigate('/SearchResult');
+                    }} />
                 </div>
             </div>
         </form >
