@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom';
-// import { useParams, Link } from 'react-router-dom';
 import SearchCards from './SearchCards';
 
 function SearchResult({ query }) {
-  const navigate = useNavigate();
   const [movies, setMovies] = useState();
   useEffect(() => {
     function raya() {
@@ -27,16 +24,7 @@ function SearchResult({ query }) {
   }, [query]);
   return (
     <div>
-      {/* <h1>Search Results</h1>
-      <div>
-        <h1>{movies?.map((movieList) => (
-          <div key={movieList.id} className='item'>
-            <h1>{movieList.title}</h1>
-          </div>
-        ))}
-        </h1> */}
       {movies?.map((movie) => <SearchCards movie={movie} />)}
-
     </div >
   )
 }

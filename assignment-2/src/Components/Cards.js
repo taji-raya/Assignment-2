@@ -26,9 +26,6 @@ function Cards(props) {
             </div>
             <div className='voteAverage'>
                 <h4>{props.vote_average}</h4>
-
-
-
             </div>
             <Link to={`/Movie/${props.id}`}><h6>{props.title}</h6></Link>
         </div>
