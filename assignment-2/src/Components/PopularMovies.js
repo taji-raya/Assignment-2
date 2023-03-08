@@ -1,17 +1,19 @@
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import Cards from './Cards';
 import Switch from './Switch';
+import { useDispatch, useSelector } from 'react-redux'
+import { setMovies } from '../Redux/Actions/MovieActions';
 //https://api.themoviedb.org/3/movie/popular/550?api_key=8b8f208cf321ce6c5f01d462798b3b33
 
 function PopularMovies() {
-
-  const [movie, setMovie] = useState([]);
+  const movies = useSelector((state) => state.popularMovies.movies);
+  const dispatch = useDispatch();
   useEffect(() => {
     const movieDB = () => {
       fetch('https://api.themoviedb.org/3/movie/popular?api_key=8b8f208cf321ce6c5f01d462798b3b33')
         .then((res) => res.json())
         .then((data) => {
-          setMovie(data.results)
+          dispatch(setMovies(data.results))
         },);
     }
     movieDB();
@@ -30,7 +32,7 @@ function PopularMovies() {
       </div>
       <div className='carousel'>
         <div className='innerCarousel'>
-          {movie.map((movieList) => (
+          {movies.map((movieList) => (
             <div key={movieList.id} className='item'>
               <Cards
                 id={movieList.id}

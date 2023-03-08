@@ -1,6 +1,5 @@
 import React from 'react'
 import Search from './Search'
-import { useState } from 'react';
 
 function Header({ setQuery }) {
 

@@ -1,22 +1,30 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import Footer from './Footer'
 import { FaHeart, FaList } from 'react-icons/fa';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectedMovie } from '../Redux/Actions/MovieActions';
+
 
 function Movie() {
-    const [movie, setMovie] = useState({});
+    const movie = useSelector((state) => state.movie);
+    const dispatch = useDispatch();
     const { movieID } = useParams();
     useEffect(() => {
+        const getMovie = () => {
+            fetch(
+                `https://api.themoviedb.org/3/movie/${movieID}?api_key=8b8f208cf321ce6c5f01d462798b3b33&language=en-US`)
+                .then((res) => res.json())
+                .then((data) => {
+                    dispatch(selectedMovie(data))
+                },
+                );
+
+        }
         getMovie();
-    })
-    const getMovie = () => {
-        fetch(
-            `https://api.themoviedb.org/3/movie/${movieID}?api_key=8b8f208cf321ce6c5f01d462798b3b33&language=en-US`)
-            .then((res) => res.json())
-            .then((data) => {
-                setMovie(data)
-            });
-    }
+    },
+        [movieID])
+
     return (
         <>
             <div className='divider'></div>

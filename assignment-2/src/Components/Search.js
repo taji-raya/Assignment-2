@@ -9,18 +9,13 @@ function Search({ setQuery }) {
         <form >
             <div className='searchAndSubmit'>
                 <input
-                    onChange={(event) => {
-                        setQuery(event.target.value)
-                    }
-                    }
+                    onChange={(event) => { setQuery(event.target.value) }}
                     className='headerSearchBarStyle'
                     type='textarea'
                     placeholder='Search'
                 />
                 <div>
-                    <input type='submit' value='Search' className='submitBtn' onClick={() => {
-                        navigate('/SearchResult');
-                    }} />
+                    <input type='submit' value='Search' className='submitBtn' onClick={() => { navigate('/SearchResult'); }} />
                 </div>
             </div>
         </form >
