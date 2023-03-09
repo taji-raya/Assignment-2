@@ -1,7 +1,7 @@
 import React from 'react'
 import Search from './Search'
 
-function Header({ setQuery }) {
+function Header() {
 
   return (
     <>
@@ -12,7 +12,7 @@ function Header({ setQuery }) {
             <p className='sentence'>Millions of movies, TV shows and people to discover. Explore now.</p>
           </div>
           <div>
-            <Search setQuery={setQuery} />
+            <Search />
           </div>
         </div>
 

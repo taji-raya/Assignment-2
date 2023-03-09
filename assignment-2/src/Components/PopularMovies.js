@@ -18,7 +18,7 @@ function PopularMovies() {
     }
     movieDB();
   },
-    [])
+    [dispatch])
   return (
     <>
       <div className='popularMovies'>

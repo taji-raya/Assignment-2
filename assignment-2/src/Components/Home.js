@@ -2,10 +2,10 @@ import React from 'react'
 import Footer from './Footer';
 import Header from './Header';
 import Movies from './PopularMovies';
-function Home({ setQuery }) {
+function Home() {
     return (
         <>
-            <Header setQuery={setQuery} />
+            <Header />
             <Movies />
             <Footer />
         </>

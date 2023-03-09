@@ -22,7 +22,7 @@ function SearchResult({ query }) {
     movieSearch();
   }, [query]);
   return (
-    <div>
+    <div >
       {movies?.map((movie) => <SearchCards movie={movie} />)}
     </div >
   )

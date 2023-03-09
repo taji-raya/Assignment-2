@@ -17,11 +17,3 @@ export const selectedMovie = (movie) => {
 
 };
 
-export const searchedMovie = (searchedQuery) => {
-    return {
-        type: ActionTypes.SEARCHED_MOVIE,
-        payload: searchedQuery,
-
-    };
-
-};

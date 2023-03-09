@@ -1,9 +1,10 @@
 import { combineReducers } from 'redux'
-import { movieReducer, searchedMovieReducer, selectedMovieReducer } from './movieReducer'
+import { movieReducer, selectedMovieReducer } from './movieReducer';
+import { searchReducer } from './searchReducer'
 const reducers = combineReducers({
     popularMovies: movieReducer,
     movie: selectedMovieReducer,
-    searchedQuery: searchedMovieReducer,
+    movies: searchReducer,
 });
 export default reducers;
 

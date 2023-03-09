@@ -8,22 +8,23 @@ import { selectedMovie } from '../Redux/Actions/MovieActions';
 
 function Movie() {
     const movie = useSelector((state) => state.movie);
-    const dispatch = useDispatch();
     const { movieID } = useParams();
+    const dispatch = useDispatch();
     useEffect(() => {
+
         const getMovie = () => {
+
             fetch(
                 `https://api.themoviedb.org/3/movie/${movieID}?api_key=8b8f208cf321ce6c5f01d462798b3b33&language=en-US`)
                 .then((res) => res.json())
                 .then((data) => {
-                    dispatch(selectedMovie(data))
-                },
+                    dispatch(selectedMovie(data));
+                }
                 );
-
         }
         getMovie();
     },
-        [movieID])
+        [movieID, dispatch])
 
     return (
         <>

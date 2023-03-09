@@ -1,4 +1,3 @@
-
 import { ActionTypes } from "../Constants/action-types"
 const initialState = {
     movies: [
@@ -26,11 +25,3 @@ export const selectedMovieReducer = ((state = {}, { type, payload }) => {
     }
 })
 
-export const searchedMovieReducer = ((state = {}, { type, payload }) => {
-    switch (type) {
-        case ActionTypes.SEARCHED_MOVIE:
-            return { ...state, ...payload }
-        default:
-            return state
-    }
-})
