@@ -1,10 +1,8 @@
 import { useEffect } from 'react'
 import Cards from './Cards';
 import Switch from './Switch';
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux';
 import { setMovies } from '../Redux/Actions/MovieActions';
-//https://api.themoviedb.org/3/movie/popular/550?api_key=8b8f208cf321ce6c5f01d462798b3b33
-
 function PopularMovies() {
   const movies = useSelector((state) => state.popularMovies.movies);
   const dispatch = useDispatch();
@@ -27,7 +25,6 @@ function PopularMovies() {
           <div className='switchContent'>
             <Switch />
           </div>
-
         </div>
       </div>
       <div className='carousel'>

@@ -1,6 +1,7 @@
 import React from 'react'
 import NavigationSearchButton from './NavigationSearchButton';
 import { Link } from 'react-router-dom';
+import LoginButton from './LoginButton';
 
 function NavigationBar() {
     return (
@@ -14,6 +15,7 @@ function NavigationBar() {
                         <li>
                             <button id='EN'>EN</button>
                         </li>
+                        <li><LoginButton /></li>
                         <li>
                             <NavigationSearchButton />
                         </li>
