@@ -2,6 +2,7 @@ import React from 'react'
 import NavigationSearchButton from './NavigationSearchButton';
 import { Link } from 'react-router-dom';
 import LoginButton from './LoginButton';
+import RegisterButton from './RegisterButton'
 
 function NavigationBar() {
     return (
@@ -16,9 +17,12 @@ function NavigationBar() {
                             <button id='EN'>EN</button>
                         </li>
                         <li><LoginButton /></li>
+                        <li><RegisterButton /></li>
+
                         <li>
                             <NavigationSearchButton />
                         </li>
+
                     </ul>
                 </div>
             </div>

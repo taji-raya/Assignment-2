@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a6404626.css",
+    "main.js": "/static/js/main.528c1ad5.js",
+    "static/js/787.8bb0473a.chunk.js": "/static/js/787.8bb0473a.chunk.js",
+    "static/media/221219142122-01-puss-in-boots-the-last-wish-film.jpeg": "/static/media/221219142122-01-puss-in-boots-the-last-wish-film.3bf9c43542f3e9f1591e.jpeg",
+    "index.html": "/index.html",
+    "main.a6404626.css.map": "/static/css/main.a6404626.css.map",
+    "main.528c1ad5.js.map": "/static/js/main.528c1ad5.js.map",
+    "787.8bb0473a.chunk.js.map": "/static/js/787.8bb0473a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a6404626.css",
+    "static/js/main.528c1ad5.js"
+  ]
+}

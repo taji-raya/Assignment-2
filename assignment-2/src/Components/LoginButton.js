@@ -5,9 +5,9 @@ function LoginButton() {
     const navigate = useNavigate();
     return (
         <div>
-            <button onClick={() => {
+            <button className='logBtn' onClick={() => {
                 navigate('/LoginPage');
-            }}>LOGIN</button>
+            }}><strong>Login </strong></button>
         </div>
     )
 }

@@ -2,6 +2,7 @@
   text-align: center;
   width: 100%;
   margin: 0;
+  font-family: sans-serif;
 }
 
 /* NavBar Component Styling */
@@ -42,6 +43,24 @@
 #EN:hover {
   background-color: white;
   color: #000;
+}
+
+.regBtn {
+  outline: none;
+  font-weight: 400;
+  border: none;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+.logBtn {
+  outline: none;
+  font-weight: 400;
+  border: none;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
 }
 
 .navBarSearch {
@@ -415,6 +434,86 @@ a {
 
 .searchResultCardsContent h4 {
   cursor: pointer;
+}
+
+/*Login Page Styling*/
+
+.loginFormContainer {
+  margin: 50px;
+  text-align: left;
+}
+
+.loginFormContainer span {
+  float: left;
+}
+
+.loginFormContainer a {
+  color: rgba(1,
+      180,
+      228);
+}
+
+.loginFormContainer a:hover {
+  text-decoration: underline;
+}
+
+.loginFormContainer input {
+  width: 100%;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 1px black;
+}
+
+#login_button {
+  border-color: rgba(1,
+      180,
+      228);
+  background-color: rgba(1,
+      180,
+      228);
+  color: #fff;
+  padding: 10px;
+  width: 70px;
+  border-radius: 13px;
+  outline: none;
+  cursor: pointer;
+
+}
+
+#login_button:hover {
+  background-color: rgba(3,
+      37,
+      65);
+  border-color: rgba(3,
+      37,
+      65);
+  ;
+}
+
+#register_button {
+  border-color: rgba(1,
+      180,
+      228);
+  background-color: rgba(1,
+      180,
+      228);
+  color: #fff;
+  padding: 10px;
+  width: 70px;
+  border-radius: 13px;
+  outline: none;
+  cursor: pointer;
+
+}
+
+#register_button:hover {
+  background-color: rgba(3,
+      37,
+      65);
+  border-color: rgba(3,
+      37,
+      65);
+  ;
 }
 
 /*Footer Component Styling*/

@@ -7,6 +7,8 @@ import Movie from './Components/Movie';
 import SearchResult from './Components/SearchResult';
 import Search from './Components/Search';
 import NavigationSearchButton from './Components/NavigationSearchButton';
+import LoginPage from './Components/LoginPage';
+import RegisterPage from './Components/RegisterPage'
 function App() {
   return (
     <div className="App">
@@ -17,6 +19,9 @@ function App() {
           <Route path="/Search" element={<Search />} />
           <Route path="/SearchResult" element={<SearchResult />} />
           <Route path="/NavSearch" element={<NavigationSearchButton />} />
+          <Route path="/LoginPage" element={<LoginPage />} />
+          <Route path="/RegisterPage" element={<RegisterPage />} />
+
           <Route path='*' element={<Error />} />
         </Route>
       </Routes>
