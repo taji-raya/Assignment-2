@@ -21,7 +21,6 @@ function App() {
           <Route path="/NavSearch" element={<NavigationSearchButton />} />
           <Route path="/LoginPage" element={<LoginPage />} />
           <Route path="/RegisterPage" element={<RegisterPage />} />
-
           <Route path='*' element={<Error />} />
         </Route>
       </Routes>
